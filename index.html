@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>ZeuSsXx001</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="dr.png">
+    </head>
+    <body>
+       <!-- <audio id="songAudio" loop>
+            <source src="SongTest.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>-->
+        <a href="https://www.instagram.com/mertxeren0/" id="img1" target="_blank">
+            <img src="https://cdn.hackernoon.com/images/PrB8ElNwFUY9FJD7Kw2aUJtm1UW2-bv3k2ihs.gif" width="64" height="64" title="Instagram : @mertxeren0" alt="Insta">
+        </a>
+        <a href="https://steamcommunity.com/id/ravage-raven" id="img2" target="_blank">
+            <img src="https://c.tenor.com/zjbXreUb5_YAAAAM/steam.gif" width="64" height="64" title="Steam : RAVEN" alt="Steam">
+        </a>
+        <a href="https://open.spotify.com/user/2122plxlwqxhsqerdkerogfzi" id="img3" target="_blank">
+            <img src="https://media4.giphy.com/media/VFwqpRsk3FbRB8rP7f/giphy.gif?cid=790b76111a84b49cbf6c7245fccd757e8bda174a171a11ea&rid=giphy.gif&ct=s" width="64" height="64" alt="Spotify" title="Spotify : KuzeyDursun">
+        </a>
+        <a href="https://www.youtube.com/channel/UCdbKwdiIj7lvDGA0SVtn_Vg" id="img4" target="_blank">
+            <img src="https://cliply.co/wp-content/uploads/2019/07/371907120_YOUTUBE_ICON_TRANSPARENT_400.gif" width="64" height="64" alt="YouTube" title="YouTube : Kuzey Dursun">
+        </a>
+        <!--<div class="music">
+            <div class="button">
+            <img src="Play.png" id="songStatus" alt="MusicControl" width="32" height="32">
+            </div>
+            <div class="song">
+                <div class="songName">Enter song name here</div>
+            </div>-->
+        </div>
+        
+        <div id="particles-js">
+            <div class="textContainer">
+                <div class="btext">
+                    <h1>@ZeuSsXx001</h1>
+                    <a>-</a>         
+                </div>
+            </div>
+            <div class="bottomText">
+                <b>©KuzeyDursun & MertEren EST.2020-21</b>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script>
+            particlesJS.load('particles-js', 'particles.json',
+            function(){
+                console.log('particles.json loaded...')
+            })
+            var rotationStrength = 55;
+            var songStatus = false;
+            window.addEventListener("mousemove", function(e) {
+                var x = (document.getElementsByClassName("btext")[0].getBoundingClientRect().left-e.clientX)/window.innerWidth
+                var y = (e.clientY-document.getElementsByClassName("btext")[0].getBoundingClientRect().top)/window.innerHeight;
+                document.getElementsByClassName("btext")[0].style.transform = "rotateX(" + ~~(y*rotationStrength) + "deg) rotateY(" + ~~(x*rotationStrength) + "deg)";
+
+            })
+
+            /*document.getElementsByClassName("music")[0].addEventListener("click", function() {
+                songStatus = !songStatus;
+                if(songStatus) {
+                    document.getElementById("songAudio").play();
+                    document.getElementById("songStatus").src = "Pause.png"
+                } else {
+                    document.getElementById("songAudio").pause();
+                    document.getElementById("songStatus").src = "Play.png"
+                }
+            })
+
+            document.getElementById("songAudio").addEventListener('loadedmetadata', function(e) {
+                console.log(e.playing)
+            });*/
+        </script>
+    </body>
+</html>
